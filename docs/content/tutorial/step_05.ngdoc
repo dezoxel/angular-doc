@@ -5,27 +5,25 @@
 <ul doc-tutorial-nav="5"></ul>
 
 
-Enough of building an app with three phones in a hard-coded dataset! Let's fetch a larger dataset
-from our server using one of angular's built-in {@link api/ng services} called {@link
-api/ng.$http $http}. We will use angular's {@link guide/di dependency
-injection (DI)} to provide the service to the `PhoneListCtrl` controller.
+Хватит писать приложение с тремя телефонами из жестко прописанного набора данных! Давайте выберем набор 
+данных по-больше с нашего сервера используя один из встроенных в angular {@link api/ng сервисов}, который
+называется {@link api/ng.$http $http}. Мы будем использовать {@link guide/di внедрение зависимости} 
+(dependency injection - DI), встроенное в  Angular, чтобы предоставить этот сервис для `PhoneListCtrl` контроллера. 
 
 
 <div doc-tutorial-reset="5"></div>
 
+Сейчас вы должны видеть список из 20 телефонов.
 
-You should now see a list of 20 phones.
+Самые важные изменения приведены ниже. Вы можете посмотреть список полных изменений на {@link
+https://github.com/angular/angular-phonecat/compare/step-4...step-5 GitHub}:
 
-The most important changes are listed below. You can see the full diff on {@link
-https://github.com/angular/angular-phonecat/compare/step-4...step-5
-GitHub}:
+## Данные
 
-## Data
+Файл `app/phones/phones.json` является набором данных в вашем проекте, который содержит список 
+телефонов по-больше и сохраненный в JSON формате. 
 
-The `app/phones/phones.json` file in your project is a dataset that contains a larger list of phones
-stored in the JSON format.
-
-Following is a sample of the file:
+Вот пример этого файла:
 <pre>
 [
  {
